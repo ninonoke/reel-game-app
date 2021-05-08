@@ -1,6 +1,6 @@
 import ReelSymbolTypes from '../enums';
 
-const PayTableSchema = [
+const payTableSchema = [
   {
     payAmount: 2000,
     symbols: [ReelSymbolTypes.CHERRY],
@@ -25,6 +25,7 @@ const PayTableSchema = [
     payAmount: 75,
     symbols: [ReelSymbolTypes.SEVEN, ReelSymbolTypes.CHERRY],
     positions: [1, 2, 3],
+    isCombination: true,
   },
   {
     payAmount: 50,
@@ -48,4 +49,4 @@ const PayTableSchema = [
   },
 ];
 
-export default PayTableSchema;
+export default payTableSchema;
