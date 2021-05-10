@@ -64,7 +64,6 @@ const App: React.FC = () => {
 
     <div className="App">
       <Layout />
-      <button type="button" onClick={onSpin}>SPIN</button>
     </div>
   );
 };

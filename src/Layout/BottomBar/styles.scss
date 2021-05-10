@@ -1,0 +1,36 @@
+@import '../../assets//vars.scss';
+
+.bottom-bar {
+    display: flex;
+    border: 0.2rem solid $game-yellow;
+    background-color: $game-dark-blue;
+    width: 100%;
+    height: 10rem;
+    margin-top: 3rem;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+
+    &__spin-button {
+        border-radius: 0.5rem;
+        font-size: 1.6rem;
+        padding: 2rem;
+        background-color: $game-light-green;
+        color: $game-white;
+
+        &--disabled {
+            background-color: $game-dark-green;
+        }
+    }
+
+    &__balance-input {
+        border-radius: 0.5rem;
+        border: 0.2rem solid $game-yellow;
+        padding: 0 1rem;
+        font-size: 1.6rem;
+        height: 5.6rem;
+        width: 16rem;
+        background-color: $game-light-blue;
+        color: $game-white;
+    }
+}

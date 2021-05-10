@@ -13,9 +13,9 @@ export enum ReelSymbolTypes {
 }
 
 export const symbols = [
-  { type: ReelSymbolTypes.THREE_BAR, src: threeBarPng },
-  { type: ReelSymbolTypes.BAR, src: barPng },
-  { type: ReelSymbolTypes.TWO_BAR, src: twoBarPng },
-  { type: ReelSymbolTypes.SEVEN, src: sevenPng },
-  { type: ReelSymbolTypes.CHERRY, src: cherryPng },
+  { type: ReelSymbolTypes.THREE_BAR, src: threeBarPng, label: '3xBAR' },
+  { type: ReelSymbolTypes.BAR, src: barPng, label: 'BAR' },
+  { type: ReelSymbolTypes.TWO_BAR, src: twoBarPng, label: '2xBAR' },
+  { type: ReelSymbolTypes.SEVEN, src: sevenPng, label: '7' },
+  { type: ReelSymbolTypes.CHERRY, src: cherryPng, label: 'CHERRY' },
 ];

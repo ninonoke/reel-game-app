@@ -37,13 +37,11 @@ $border-width: 1rem;
 
         &--left {
             left: -#{$border-width};
-
         }
     }
 
     &__reel {
         position: relative;
-        overflow: hidden;
 
         &::before {
             height: 30%;

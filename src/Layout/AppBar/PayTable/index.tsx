@@ -16,8 +16,8 @@ const PayTable:React.FC<PayTableProps> = ({ onClose }) => (
         onClick={onClose}
       >
         <img
-          alt="info icon"
-          className="pay-table-wrapper__info-icon"
+          alt="close icon"
+          className="pay-table-wrapper__close-icon"
           src={closeSvg}
         />
       </button>
