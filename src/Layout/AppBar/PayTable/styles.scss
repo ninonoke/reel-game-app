@@ -1,0 +1,35 @@
+@import '../../../assets/vars.scss';
+
+.pay-table-wrapper {
+    background-color: $game-white;
+    position: fixed;
+    border-radius: 1.5rem;
+    width: 100vw;
+    padding: 2rem 2rem 4rem;
+    left: 0;
+    top: 0;
+    z-index: 4;
+
+    &__close-button {
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+    }
+
+    &__item-wrapper {
+        padding-top: 5rem;
+    }
+
+    &__item {
+        color: $game-dark-periwinkle;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 2.5rem;
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+    &__title {
+        padding-right: 6rem;
+    }
+}

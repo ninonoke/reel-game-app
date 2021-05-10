@@ -3,6 +3,7 @@ import './assets/normalize.scss';
 import ReelSymbolTypes from './enums';
 import payTableSchema from './constants/payTableSchema';
 import onlyUnique from './util/onlyUnique';
+import Layout from './Layout/index';
 
 interface InitialReelState {
   symbol?: ReelSymbolTypes
@@ -65,6 +66,7 @@ const App: React.FC = () => {
   return (
 
     <div className="App">
+      <Layout />
       <button type="button" onClick={onSpin}>SPIN</button>
     </div>
   );
