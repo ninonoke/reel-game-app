@@ -1,0 +1,73 @@
+@import '../../assets/vars.scss';
+
+$border-width: 1rem;
+
+.reels-wrapper {
+    border: 0.2rem solid $game-yellow;
+    width: 100%;
+    height: 25rem;
+
+    &__inner {
+        position: relative;
+        display: flex;
+        border: $border-width solid $game-dark-blue;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__arrow {
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        z-index: 3;
+        right: -#{$border-width};
+        transform: translateY(-50%);
+
+        &--first {
+            top: 20%;
+        }
+
+        &--second {
+            top: 50%;
+        }
+
+        &--third {
+            top: 80%;
+        }
+
+        &--left {
+            left: -#{$border-width};
+
+        }
+    }
+
+    &__reel {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            height: 30%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            content: '';
+            background-image: linear-gradient(to bottom, rgba(0, 0, 1, 0.472), rgba(0, 0, 0, 0));
+        }
+
+        &::after {
+            width: 100%;
+            height: 30%;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            content: '';
+            background-image: linear-gradient(to top, rgba(0, 0, 1, 0.472), rgba(0, 0, 0, 0));
+        }
+    }
+
+    &__border-right {
+        width: 1.5rem;
+        background-color: $game-dark-blue;
+    }
+}

@@ -1,4 +1,4 @@
-import ReelSymbolTypes from '../enums';
+import { ReelSymbolTypes } from './symbols';
 
 const payTableSchema = [
   {

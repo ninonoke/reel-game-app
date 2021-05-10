@@ -1,0 +1,9 @@
+@import '../../../assets//vars.scss';
+
+.reel {
+    background-color: $game-white;
+
+    &__image {
+        width: 100%;
+    }
+}

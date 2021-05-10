@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './assets/normalize.scss';
-import ReelSymbolTypes from './enums';
 import payTableSchema from './constants/payTableSchema';
 import onlyUnique from './util/onlyUnique';
 import Layout from './Layout/index';
+import { symbols, ReelSymbolTypes } from './constants/symbols';
 
 interface InitialReelState {
   symbol?: ReelSymbolTypes
@@ -14,9 +14,6 @@ interface RandomReelDataInterface {
   position: number
 }
 
-const SymbolArr = [ReelSymbolTypes.THREE_BAR, ReelSymbolTypes.BAR,
-  ReelSymbolTypes.TWO_BAR, ReelSymbolTypes.SEVEN, ReelSymbolTypes.CHERRY];
-
 const INITIAL_STATE = { symbol: undefined, position: undefined };
 
 const App: React.FC = () => {
@@ -25,10 +22,10 @@ const App: React.FC = () => {
   const [thirdReel, setThirdReel] = useState<InitialReelState>(INITIAL_STATE);
 
   const getRandomReelData = () => {
-    const randomSymbol = SymbolArr[Math.floor(Math.random() * SymbolArr.length)];
+    const randomSymbol = symbols[Math.floor(Math.random() * symbols.length)];
     const randomPosition = Math.floor(Math.random() * 3) + 1;
     return {
-      symbol: randomSymbol,
+      symbol: randomSymbol.type,
       position: randomPosition,
     };
   };
