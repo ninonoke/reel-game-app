@@ -11,7 +11,16 @@ const AppBar:React.FC = () => {
 
   return (
     <div className="app-bar">
-      <button className="app-bar__info-button" type="button" onClick={() => setIsInfoOpen(true)}>
+      <button
+        className="app-bar__info-button"
+        type="button"
+        onClick={() => {
+          if (isSettingsOpen) {
+            setIsSettingsOpen(false);
+          }
+          setIsInfoOpen(true);
+        }}
+      >
         <img
           alt="info icon"
           className="info-icon"
@@ -21,7 +30,16 @@ const AppBar:React.FC = () => {
       {isInfoOpen
 
           && <PayTable onClose={() => setIsInfoOpen(false)} />}
-      <button className="app-bar__settings-button" type="button" onClick={() => setIsSettingsOpen(true)}>
+      <button
+        className="app-bar__settings-button"
+        type="button"
+        onClick={() => {
+          if (isInfoOpen) {
+            setIsInfoOpen(false);
+          }
+          setIsSettingsOpen(true);
+        }}
+      >
         <img
           alt="settings icon"
           className="settings-icon"
