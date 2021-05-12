@@ -1,2 +1,5 @@
 export const START_SPIN = 'START_SPIN';
+export const SET_FIRST_REEL_DATA = 'SET_FIRST_REEL_DATA';
+export const SET_SECOND_REEL_DATA = 'SET_SECOND_REEL_DATA';
+export const SET_THIRD_REEL_DATA = 'SET_THIRD_REEL_DATA';
 export const END_SPIN = 'END_SPIN';

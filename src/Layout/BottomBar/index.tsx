@@ -1,7 +1,8 @@
 import React, { useCallback } from 'react';
 import { Dispatch } from 'redux';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
-import { startSpin } from '../../store/actionCreators';
+import Classnames from 'classnames';
+import { onSpin } from '../../store/actionCreators';
 import { ReducerInterface } from '../../store/interfaces';
 import './styles.scss';
 
@@ -14,8 +15,8 @@ const BottomBar:React.FC = () => {
   const dispatch: Dispatch<any> = useDispatch();
 
   const onStartSpin = useCallback(
-    () => dispatch(startSpin()),
-    [dispatch, startSpin],
+    () => dispatch(onSpin()),
+    [dispatch],
   );
 
   return (
@@ -24,7 +25,14 @@ const BottomBar:React.FC = () => {
         <input className="bottom-bar__balance-input" type="number" min="1" max="5000" />
       </div>
       <div>
-        <button className="bottom-bar__spin-button bottom-bar__spin-button--disabled" type="button" onClick={() => onStartSpin()}>SPIN</button>
+        <button
+          className={Classnames('bottom-bar__spin-button', { 'bottom-bar__spin-button--disabled': isSpinning })}
+          type="button"
+          onClick={() => onStartSpin()}
+        >
+          SPIN
+
+        </button>
       </div>
     </div>
   );

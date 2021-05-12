@@ -6,8 +6,10 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import App from './App';
 import reducer from './store/reducer';
+import { ReducerInterface, ActionInterface, DispatchType } from './store/interfaces';
 
-const store: Store & {
+const store: Store<ReducerInterface, ActionInterface> & {
+  dispatch: DispatchType
 } = createStore(reducer, applyMiddleware(thunk));
 
 ReactDOM.render(
