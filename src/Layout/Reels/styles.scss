@@ -42,6 +42,7 @@ $border-width: 1rem;
 
     &__reel {
         position: relative;
+        flex: 1;
 
         &::before {
             height: 30%;
